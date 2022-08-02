@@ -1,0 +1,49 @@
+.input-custom {
+    border: 1px solid #cfcfcf;
+    border-radius: 8px;
+    min-width: 308px;
+    min-height: 56px;
+    font-size: 14px;
+
+    &-text {
+        @extend .input-custom;
+        background-color: $white;
+        color: $black;
+
+        &::placeholder {
+            opacity: .4;
+            color: $black;
+            text-transform: capitalize;
+        }
+
+        &:active,
+        &:focus-visible,
+        &:focus {
+            border-color: $orange;
+            outline: $orange;
+        }
+    }
+    &-radio {
+        @extend .input-custom;
+        min-width: 20px;
+        min-height: 20px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: none;
+          }
+
+        &:checked {
+            background-color: $orange;
+        }
+    }
+}
+
+.label-custom {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.214286px;
+    color: $black;
+}

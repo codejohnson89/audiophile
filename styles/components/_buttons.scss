@@ -1,0 +1,55 @@
+.btn-custom {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    &-orange {
+        @extend .btn-custom;
+        background-color: $orange;
+        border-color: $orange;
+        color: $white;
+
+        &:hover {
+            background-color: $lightOrange;
+            border-color: $lightOrange;
+        }
+    }
+    &-white {
+        @extend .btn-custom;
+        background-color: $white;
+        border-color: $white;
+        color: $black;
+
+        &:hover {
+            background-color: $black;
+            border-color: $black;
+            color: $white;
+        }
+    }
+    &-black {
+        @extend .btn-custom;
+        background-color: $black;
+        border-color: $black;
+        color: $white;
+
+        &:hover {
+            background-color: $white;
+            border-color: $white;
+            color: $black;
+        }
+    }
+    &-noBorder {
+        @extend .btn-custom;
+        background-color: transparent;
+        border-color: transparent;
+        color: $black;
+
+        &:hover {
+            background-color: transparent;
+            border-color: transparent;
+            color: $orange;
+        }
+    }
+}

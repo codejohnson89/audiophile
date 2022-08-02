@@ -1,0 +1,50 @@
+.navbar {
+    background-color: #191919;
+    padding: 28px 0;
+    display: flex;
+    flex-direction: column;
+
+    .container {
+        max-width: 1110px;
+        margin: 0 auto;
+        .navbar-collapse {
+            .navbar-nav {
+                width: 100%;
+                gap: 34px;
+                justify-content: center;
+
+                .nav-link {
+                    color: $white;
+                    font-weight: 700;
+                    font-size: 13px;
+                    line-height: 25px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .navbar-toggler {
+            border: 1px solid #fff;
+            order: -1;
+        }
+
+        .cart {
+            background-image: url('../../../public/assets/shared/desktop/icon-cart.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 23px;
+            height: 20px;
+        }
+    }
+
+    .outline {
+    height: 1px;
+    background-color: rgba(255,255,255,.2);
+    position: absolute;
+    top: 6.4em;
+    width: 100%;
+    max-width: 1110px;
+
+    }
+}

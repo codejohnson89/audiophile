@@ -1,0 +1,43 @@
+.heroHome {
+    min-height: 633px;
+    width: 100%;
+    background-image: url('../../../public/assets/home/desktop/image-hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -85px;
+
+    .textContainer {
+        max-width: 398px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        position: relative;
+        left: 165px;
+        top: 128px;
+        p {
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .5);
+        }
+
+        h1 {
+            color: $white;
+        }
+
+        .description {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 25px;
+            color: rgba(255, 255, 255, .75);
+            mix-blend-mode: normal;
+        }
+
+        .btn {
+            max-width: 168px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0px;
+        }
+    }
+}

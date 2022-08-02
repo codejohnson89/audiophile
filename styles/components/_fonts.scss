@@ -1,0 +1,54 @@
+.heading- {
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &h1 {
+        @extend .heading-;
+        font-size: 56px;
+        line-height: 58px;
+        letter-spacing: 2px;
+    }
+
+    &h2 {
+        @extend .heading-;
+        font-size: 40px;
+        line-height: 44px;
+        letter-spacing: 1.5px;
+    }
+    &h3 {
+        @extend .heading-;
+        font-size: 32px;
+        line-height: 36px;
+        letter-spacing: 1.15px;
+    }
+    &h4 {
+        @extend .heading-;
+        font-size: 28px;
+        line-height: 38px;
+        letter-spacing: 2px;
+    }
+    &h5 {
+        @extend .heading-;
+        font-size: 24px;
+        line-height: 33px;
+        letter-spacing: 1.7px;
+    }
+    &h6 {
+        @extend .heading-;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 1.3px;
+    }
+    &overline {
+        @extend .heading-;
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: 10px;
+    }
+    &subtitle {
+        @extend .heading-;
+        font-size: 13px;
+        line-height: 25px;
+        letter-spacing: 1px;
+    }
+}

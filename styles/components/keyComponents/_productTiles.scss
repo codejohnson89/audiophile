@@ -1,0 +1,122 @@
+.productTiles {
+    min-height: 1300px;
+    max-width: 1110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    margin-bottom: 200px;
+
+    .product-speaker-zx9 {
+        min-height: 560px;
+        min-width: 1110px;
+        background-color: $orange;
+        background-image: url('../../../public/assets/home/desktop/pattern-circles.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: -13em -2em;
+        border-radius: 8px;
+        display: flex;
+        gap: 138px;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+
+        .textContainer {
+            max-width: 350px;
+            h1, p {
+                color: $white;
+            }
+
+            p {
+                margin: 24px 0 40px;
+            }
+
+            .btn {
+                max-width: 160px;
+                height: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0px;
+            }
+        }
+
+        .imageContainer {
+            position: relative;
+            top: 3.8em;
+        }
+    }
+
+    .product-speaker-zx7 {
+        min-height: 320px;
+        min-width: 100%;
+        background-image: url('../../../public/assets/home/desktop/image-speaker-zx7.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        .textContainer {
+            max-width: 204px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            position: relative;
+            left: 98px;
+            .btn {
+                max-width: 160px;
+                height: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0px;
+                background-color: transparent;
+                color: $black;
+                border-color: $black;
+            }
+        }
+    }
+
+    .product-earphones-yx1 {
+        min-width: 100%;
+        min-height: 320px;
+        display: flex;
+        justify-content: space-between;
+
+        .image {
+            background-image: url('../../../public/assets/home/desktop/image-earphones-yx1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .tile {
+            min-width: 540px;
+            display: flex;
+            border-radius: 8px;
+            background-color: #F1F1F1;
+
+            .textContainer {
+                max-width: 247px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 32px;
+                position: relative;
+                left: 98px;
+                .btn {
+                    max-width: 160px;
+                    height: 48px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 0px;
+                    background-color: transparent;
+                    color: $black;
+                    border-color: $black;
+                }
+            }
+        }
+    }
+}
