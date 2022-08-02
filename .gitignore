@@ -33,5 +33,7 @@ yarn-error.log*
 
 
 #starter code
-audiophile-ecommerce-website
-audiophile-ecommerce-website-figma
+/audiophile-ecommerce-website
+
+#figma
+/audiophile-ecommerce-website-figma
