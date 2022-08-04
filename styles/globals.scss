@@ -11,6 +11,10 @@
 @import './components/keyComponents/tiles';
 @import './components/keyComponents/productTiles';
 @import './components/keyComponents/audioGear';
+
+// import category page styles
+@import './components/category/category';
+
 html,
 body {
   padding: 0;

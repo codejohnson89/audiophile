@@ -1,23 +1,29 @@
-import CategoryHeader from '../../components/CategoryHeader';
-// import database from '../../DataManagement/data/data.json';
-import Product from './product';
+import { useRouter } from "next/router";
+import CategoryHeader from "../../components/CategoryHeader";
+import Product from "./product";
 
-// import { getDatabase, ref, onValue} from "firebase/database";
+import database from '../../DataManagement/data/data.json';
 
-// import { app } from '../../firebase/firebase';
+export default function Category( { data }) {
 
-export default function Categories( {data} ) {
-    // console.log(data)
 
-    const productData = data
+    const router = useRouter();
+    const filterData = data.filter((data) => {
+        return data.category === router.query.category
+    })
 
-    return ( 
+    console.log(filterData)
+
+
+
+    console.log(router)
+    return (
         <section>
-            <CategoryHeader header="All Products"/>
+            <CategoryHeader header={router.query.category}/>
             <div className="catergory">
                 <ul>
             {
-                productData.map((data) => {
+                filterData.map((data) => {
                     return <li key={data.id}>
                         <Product                          
                         productName={data.name} 
@@ -31,11 +37,10 @@ export default function Categories( {data} ) {
             </ul>
         </div>
         </section>
-
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps () {
     let data;
     try {
         const res = await fetch('https://audiophile-a8abd-default-rtdb.firebaseio.com/data.json');

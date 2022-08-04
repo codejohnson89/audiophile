@@ -1,0 +1,12 @@
+.catergory {
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+    max-width: 1110px;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+
+@import './product/product';
+
+}

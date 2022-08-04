@@ -1,0 +1,8 @@
+.btn {
+    min-width: 168px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px;
+}

@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 import logo from '../../public/assets/shared/desktop/logo.svg';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function NavigationBar () {
     return (
@@ -16,10 +17,10 @@ export default function NavigationBar () {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                  <Nav.Link href="#home">Home</Nav.Link>
-                  <Nav.Link href="#link">Headphones</Nav.Link>
-                  <Nav.Link href="#link">Speakers</Nav.Link>
-                  <Nav.Link href="#link">Earphones</Nav.Link>
+                  <Link className='nav-link' href="/"><a className="nav-link">Home</a></Link>
+                  <Link href="/categories/headphones"><a className="nav-link">Headphones</a></Link>
+                  <Link href="/categories/speakers"><a className="nav-link">Speakers</a></Link>
+                  <Link href="/categories/earphones"><a className="nav-link">Earphones</a></Link>
                 </Nav>
               </Navbar.Collapse>
               <div className='cart'>Cart</div>

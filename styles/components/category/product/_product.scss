@@ -1,0 +1,36 @@
+ul {
+    list-style-type: none;
+
+    li:nth-child(even) {
+        .product {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .product {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 125px;
+        margin-bottom: 125px;
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .imageContainer {
+            background-color: $darkGrey;
+            min-width: 540px;
+            min-height: 560px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .textContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 445px;
+        }
+    }
+}
