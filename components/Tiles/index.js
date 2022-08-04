@@ -27,7 +27,7 @@ export default function Tiles () {
         <section className='OccasionTiles'>
            {
             tileData.map((data) => {
-                return <Tile data={data}/>
+                return <Tile key={data.text} data={data}/>
             })
            }
         </section>

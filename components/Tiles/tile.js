@@ -7,7 +7,7 @@ export default function Tile (props) {
     return (
         <>
             <div className="tile">
-                <Image src={data.img} width={122} height={160}/>
+                <Image src={data.img} width={122} height={160} alt="product image"/>
                 <div className="textContainer">
                     <h6 className="heading-h6">{data.text}</h6>
                     <p className="heading-overline">Shop</p>

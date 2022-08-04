@@ -12,7 +12,7 @@ export default function NavigationBar () {
           <Navbar expand="lg">
             <div className={['container', 'navContainer'].join(' ')}>
               <Navbar.Brand href="#home">
-                  <Image src={logo} />
+                  <Image src={logo} alt="Home image"/>
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">

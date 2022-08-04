@@ -7,7 +7,7 @@ export default function ProductSpeakerA() {
     return (
         <div className="product-speaker-zx9">
             <div className="imageContainer">
-                <Image src={image} width={410} height={493}/>
+                <Image src={image} width={410} height={493} alt="product image"/>
             </div>
             <div className="textContainer">
                 <h1 className="heading-h1">zx9 speaker</h1>
