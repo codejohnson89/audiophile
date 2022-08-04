@@ -2,7 +2,8 @@ import { useRouter } from "next/router";
 import CategoryHeader from "../../components/CategoryHeader";
 import Product from "./product";
 
-import database from '../../DataManagement/data/data.json';
+import AudioGear from "../../components/AudioGear";
+import Tiles from "../../components/Tiles";
 
 export default function Category( { data }) {
 
@@ -12,11 +13,6 @@ export default function Category( { data }) {
         return data.category === router.query.category
     })
 
-    console.log(filterData)
-
-
-
-    console.log(router)
     return (
         <section>
             <CategoryHeader header={router.query.category}/>
@@ -25,7 +21,8 @@ export default function Category( { data }) {
             {
                 filterData.map((data) => {
                     return <li key={data.id}>
-                        <Product                          
+                        <Product
+                        id={data.id}                          
                         productName={data.name} 
                         productDescription={data.description} 
                         productImage={data.image.desktop}/>
@@ -34,8 +31,10 @@ export default function Category( { data }) {
 
                 
             }
-            </ul>
-        </div>
+                </ul>
+            </div>
+            <Tiles/>
+            <AudioGear />
         </section>
     )
 }

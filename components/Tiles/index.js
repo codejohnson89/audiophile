@@ -7,27 +7,28 @@ import speakers from '../../public/assets/shared/desktop/image-category-thumbnai
 const tileData = [
     {
         img: headphones.src,
-        text: 'headphones'
+        text: 'headphones',
+        link: '/categories/headphones'
     },
     {
         img: earphones.src,
-        text: 'earphones'
+        text: 'earphones',
+        link: '/categories/earphones'
     },
     {
         img: speakers.src,
-        text: 'speakers'
+        text: 'speakers',
+        link: '/categories/speakers'
     }
 ]
 
 export default function Tiles () {
 
-    console.log(tileData)
-
     return (
         <section className='OccasionTiles'>
            {
             tileData.map((data) => {
-                return <Tile key={data.text} data={data}/>
+                return <Tile key={data.text} data={data} link={data.link}/>
             })
            }
         </section>

@@ -1,10 +1,5 @@
 import CategoryHeader from '../../components/CategoryHeader';
-// import database from '../../DataManagement/data/data.json';
 import Product from './product';
-
-// import { getDatabase, ref, onValue} from "firebase/database";
-
-// import { app } from '../../firebase/firebase';
 
 export default function Categories( {data} ) {
     // console.log(data)

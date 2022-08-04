@@ -6,7 +6,7 @@ export default function ProductSpeakerB() {
         <div className="product-speaker-zx7">
             <div className="textContainer">
                 <h4 className="heading-h4">zx7 speaker</h4>
-                <Link href="/"><a className="btn btn-custom-black">see product</a></Link>
+                <Link href="/product/4"><a className="btn btn-custom-black">see product</a></Link>
             </div>
         </div>
     )

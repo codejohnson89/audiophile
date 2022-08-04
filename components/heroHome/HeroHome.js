@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import hero from "../../public/assets/home/desktop/image-hero.jpg";
 
 export default function HeroHome () {
@@ -11,7 +12,7 @@ export default function HeroHome () {
                     <p className="description">
                     Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
                     </p>
-                    <a className="btn btn-custom-orange">see product</a>
+                    <Link href="/product/3"><a className="btn btn-custom-orange">see product</a></Link>
                 </div>
                 {/* <div className="imageContainer">
                     <Image src={hero} />

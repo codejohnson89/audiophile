@@ -12,7 +12,7 @@ export default function ProductSpeakerA() {
             <div className="textContainer">
                 <h1 className="heading-h1">zx9 speaker</h1>
                 <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-                <Link href="/"><a className="btn btn-custom-black">see product</a></Link>
+                <Link href="/product/5"><a className="btn btn-custom-black">see product</a></Link>
             </div>
         </div>
     )

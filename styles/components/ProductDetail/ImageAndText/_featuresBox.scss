@@ -1,0 +1,39 @@
+.featuresBox {
+    display: flex;
+    align-items: flex-start;
+    gap: 125px;
+
+    .features {
+        max-width: 635px;
+        display: flex;
+        flex-direction: column;
+        min-height: 318px;
+        gap: 10px;
+    }
+
+    .box {
+        min-width: 350px;
+        min-height: 225px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .items {
+            list-style: none;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            
+            li {
+                display: flex;
+                max-width: 225px;
+                gap: 25px;
+
+                .count {
+                    color: $orange;
+                }
+            }
+        }
+    }
+}

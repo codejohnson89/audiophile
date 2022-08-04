@@ -9,7 +9,7 @@ export default function Earphones() {
             <div className="tile">
                 <div className="textContainer">
                     <h4 className="heading-h4">yx1 earphones</h4>
-                    <Link href="/"><a className="btn btn-custom-black">see product</a></Link>
+                    <Link href="/product/0"><a className="btn btn-custom-black">see product</a></Link>
                 </div>
             </div>
         </div>
