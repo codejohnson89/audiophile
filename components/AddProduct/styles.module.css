@@ -1,0 +1,11 @@
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn:focus-visible,
+.btn {
+    min-width: 160px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

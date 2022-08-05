@@ -18,37 +18,9 @@
 // import product detail page styles
 @import './components/ProductDetail/productDetail';
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Manrope', sans-serif;
-  font-size: 15px;
-  line-height: 25px;
-}
+// import checkout page styles
+@import './components/checkout/checkout';
 
-a {
-  color: inherit;
-  text-decoration: none;
-
-  &:hover {
-    color: $orange;
-  }
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: $black;
-    background: $white;
-  }
-}
 
 .wrapper {
   max-width: 1440px;
@@ -57,4 +29,13 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+a {
+  color: $orange;
+  text-decoration: none;
+
+  &:hover {
+    color: $orange;
+  }
 }

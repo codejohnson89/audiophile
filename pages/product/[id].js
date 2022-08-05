@@ -4,10 +4,18 @@ import Tiles from "../../components/Tiles";
 import AudioGear from "../../components/AudioGear";
 import ImageAndText from "../../components/ProductDetails/ImageAndText";
 import FeaturesBox from "../../components/ProductDetails/FeaturesBox";
+import Link from "next/link";
+import BackButton from "../../components/BackButton";
 
 export default function ProductDetail({ data }) {
+
+    const router = useRouter();
+
+    console.log(router)
     return (
+        
         <section className="product-details">
+            <BackButton />
             <ImageAndText 
                 image={data.image.desktop} 
                 name={data.name} 

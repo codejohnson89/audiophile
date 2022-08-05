@@ -5,6 +5,17 @@
     flex-direction: column;
     gap: 160px;
 
+    // .back {
+    //     background-color: transparent;
+    //     border: none;
+    //     color: $black;
+    //     text-transform: capitalize;
+    //     display: flex;
+    //     position: relative;
+    //     top: 79px;
+    //     opacity: .5;
+    // }
+
 
     @import './ImageAndText/imageandtext';
     @import './ImageAndText/featuresBox';

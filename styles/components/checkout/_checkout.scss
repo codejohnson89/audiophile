@@ -1,0 +1,67 @@
+.checkout {
+    max-width: 1110px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    .form {
+        background-color: $white;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 730px;
+            margin: 0 auto;
+            padding: 0 48px;
+            gap: 94px;
+
+            .formDataCollection {
+            
+                .section {
+                    .heading-subtitle {
+                        color: $orange;
+                        text-transform: uppercase;
+                    }
+    
+                    .form-group {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 16px;
+    
+                        .group {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                        }
+    
+                        .payment-section {
+                            flex-basis: 100%;
+                            display: flex;
+                            justify-content: space-between;
+    
+                            .group {
+                                .border {
+                                    min-width: 308px;
+                                    min-height: 56px;
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    gap: 21px;
+                                    padding-left: 1em;
+    
+                                    input {
+                                        order: -1;
+                                    }
+                                }
+                            }
+                        }
+    
+                        .address {
+                            flex-basis: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

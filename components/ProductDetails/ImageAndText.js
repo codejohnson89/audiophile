@@ -1,4 +1,6 @@
 import Image from "next/image";
+import AddProduct from "../AddProduct";
+import QuantityBox from "../QuantityBox";
 
 export default function ImageAndText (props) {
     return (
@@ -10,6 +12,11 @@ export default function ImageAndText (props) {
                     <h2>{props.name}</h2>
                     <p>{props.description}</p>
                     <p className="price">${props.price}</p>
+                    <div className="btn-group">
+                        <QuantityBox />
+                        <AddProduct/>
+                    </div>
+                    
                 </div>
             </div>
     )

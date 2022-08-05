@@ -1,0 +1,10 @@
+.back {
+    background-color: transparent;
+    border: none;
+    color: #000;
+    text-transform: capitalize;
+    display: flex;
+    position: relative;
+    top: 79px;
+    opacity: .5;
+}

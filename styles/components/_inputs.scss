@@ -9,6 +9,7 @@
         @extend .input-custom;
         background-color: $white;
         color: $black;
+        padding-left: 1em;
 
         &::placeholder {
             opacity: .4;
@@ -46,4 +47,5 @@
     line-height: 16px;
     letter-spacing: -0.214286px;
     color: $black;
+    text-transform: capitalize;
 }
