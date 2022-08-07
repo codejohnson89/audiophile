@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import hero from "../../public/assets/home/desktop/image-hero.jpg";
 
 export default function HeroHome () {
     return (
         <>
             <section className="heroHome">
+                <div className="wrapper">
                 <div className="textContainer">
                     <p className="heading-overline">new product</p>
                     <h1 className="heading-h1">XX99 Mark II Headphones</h1>
@@ -17,6 +17,7 @@ export default function HeroHome () {
                 {/* <div className="imageContainer">
                     <Image src={hero} />
                 </div> */}
+                </div>
             </section>
         </>
     )

@@ -24,8 +24,8 @@ export default function NavigationBar () {
                 </Nav>
               </Navbar.Collapse>
               <div className='cart'>Cart</div>
-              <div className='outline'></div>
             </div>
+            <div className='outline'></div>
           </Navbar>
         </>
     )

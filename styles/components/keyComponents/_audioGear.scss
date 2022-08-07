@@ -11,6 +11,7 @@
         justify-content: center;
         flex-direction: column;
         max-width: 445px;
+
         h2 {
             .orange {
                 color: $orange;
@@ -23,5 +24,40 @@
         background-size: cover;
         background-repeat: no-repeat;
         min-width: 540px;
+    }
+
+    @media only screen and (max-width: 1025px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 63px;
+
+        .image {
+            min-height: 300px;
+            min-width: 690px;
+            background-image: url('../../../public/assets/shared/tablet/image-best-gear.jpg');
+        }
+
+        .textContainer {
+            max-width: 573px;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        gap: 40px;
+        .image {
+            background-image: url('../../../public/assets/shared/mobile/image-best-gear.jpg');
+            min-width: 327px;
+        }
+
+        .textContainer {
+            max-width: 327px;
+
+            h2 {
+                text-align: center;
+                font-size: 28px;
+                line-height: 38px;
+                letter-spacing: 1px;
+            }
+        }
     }
 }

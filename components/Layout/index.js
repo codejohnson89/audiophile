@@ -5,6 +5,7 @@ export default function Layout (props) {
         <>
             <NavigationBar/>
             {props.children}
+            <div className="footer">Footer</div>
         </>
     )
 }
