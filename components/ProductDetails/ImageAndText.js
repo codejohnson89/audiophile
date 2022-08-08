@@ -14,7 +14,7 @@ export default function ImageAndText (props) {
                     <p className="price">${props.price}</p>
                     <div className="btn-group">
                         <QuantityBox />
-                        <AddProduct/>
+                        <AddProduct data={props.data}/>
                     </div>
                     
                 </div>

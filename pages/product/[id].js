@@ -6,17 +6,18 @@ import ImageAndText from "../../components/ProductDetails/ImageAndText";
 import FeaturesBox from "../../components/ProductDetails/FeaturesBox";
 import Link from "next/link";
 import BackButton from "../../components/BackButton";
+import Gallery from "../../components/ProductDetails/Gallery";
 
 export default function ProductDetail({ data }) {
 
     const router = useRouter();
 
-    console.log(router)
     return (
         
         <section className="product-details">
             <BackButton />
-            <ImageAndText 
+            <ImageAndText
+                data={data} 
                 image={data.image.desktop} 
                 name={data.name} 
                 description={data.description} 
@@ -24,6 +25,7 @@ export default function ProductDetail({ data }) {
             <FeaturesBox 
             features={data.features}
             includes={data.includes}/>
+            <Gallery data={data}/>
             <Tiles />
             <AudioGear />
         </section>
