@@ -10,10 +10,7 @@ export const cartSlice = createSlice({
     initialState,
     reducers: {
         addCart: (state, action) => {
-            // state.count += 1
-            // console.log(action.payload.productName)
             state.value.push(action.payload)
-            state.total.push(action.payload.productPrice * action.payload.quantity)
             state.count += 1
             
         },
