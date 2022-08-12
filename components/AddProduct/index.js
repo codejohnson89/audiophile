@@ -4,13 +4,20 @@ import { useSelector, useDispatch } from 'react-redux';
 import { updateCart, addCart } from '../../DataManagement/features/cart/cartSlice';
 import styles from './styles.module.css';
 
+
 /**
- * This function is a custom hook that is used to add a product to the cart
- * @param props - this is the data that is passed down from the parent component
- * @returns A button that will add the product to the cart
+ * The above code is checking if the cart is empty. If it is empty, it will add the product to the
+ * cart. If it is not empty, it will check if the product is already in the cart. If it is not in the
+ * cart, it will add the product to the cart. If it is in the cart, it will update the quantity of the
+ * product in the cart
+ * @param props - This is the props that are passed to the component.
+ * @returns a div with a button.
  */
 export default function AddProduct (props) {
-    const [productInfo, setProductInfo] = useState()
+    const [productInfo, setProductInfo] = useState({
+        name: '',
+        empty: true
+    })
     const cart = useSelector((state) => state.cart.value);
     const cartCount = useSelector((state) => state.cart.count);
     const dispatch = useDispatch();
@@ -25,30 +32,39 @@ export default function AddProduct (props) {
 
 
     function addProduct() {
-        
-        const dub = cart.find((item) => {
-            return item.productName == props.data.name
-        })
-        // check the cart to see if this item has already been added
-        // if it there is a product with the same name the updateCart action will pop it and add new data aka quantity
-        // this may be a performance issue with replacing the whole object besides updating just the key value of quantity only
-            if(!productInfo) {
-                console.log(cart)
+
+        /* The above code is checking if the cart is empty. If it is empty, it will add the product to the
+cart. If it is not empty, it will check if the product is already in the cart. If it is not in the
+cart, it will add the product to the cart. If it is in the cart, it will update the quantity of the
+product in the cart. */
+            if(productInfo.empty) {
+                console.log("cart is empty")
                 setProductInfo({
-                    productName: props.data.name
-                })
+                    name: props.data.name,
+                    empty: false
+            })
                 dispatch(addCart({
                     productName: props.data.name,
                     productPrice: props.data.price,
                     quantity: getQuantity()
                 }))
             } else  {
-                console.log(cart)
-                dispatch(updateCart({
-                    productName: props.data.name,
-                    productPrice: props.data.price,
-                    quantity: getQuantity()
-                }))
+                if (productInfo.name != props.data.name) {
+                    console.log('cart is not empty but this is a new product and here is the current local cart item', productInfo)
+                    setProductInfo({name: props.data.name})
+                    dispatch(addCart({
+                        productName: props.data.name,
+                        productPrice: props.data.price,
+                        quantity: getQuantity()
+                    }))
+                } else {
+                    console.log(cart)
+                    dispatch(updateCart({
+                        productName: props.data.name,
+                        productPrice: props.data.price,
+                        quantity: getQuantity()
+                    }))
+                }
             }
     }
 

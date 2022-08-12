@@ -26,7 +26,7 @@ export default function NavigationBar () {
                   <Link href="/categories/earphones"><a className="nav-link">Earphones</a></Link>
                 </Nav>
               </Navbar.Collapse>
-              <div className='cart' onClick={() => console.log('im a cart')}>Cart</div>
+              <div className='cart' onClick={() => console.log('im a cart')}></div>
             </div>
             <div className='outline'></div>
           </Navbar>

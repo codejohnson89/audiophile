@@ -35,6 +35,10 @@
             background-size: cover;
             width: 23px;
             height: 20px;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
