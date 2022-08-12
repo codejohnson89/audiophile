@@ -1,0 +1,27 @@
+.Others {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 64px;
+
+    .products {
+        ul {
+            display: flex;
+            gap: 30px;
+
+            li {
+                max-width: 350px;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                h5 {
+                    margin: 40px auto 32px;
+                }
+            }
+        }
+    }
+}

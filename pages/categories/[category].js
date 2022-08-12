@@ -5,6 +5,10 @@ import Product from "./product";
 import AudioGear from "../../components/AudioGear";
 import Tiles from "../../components/Tiles";
 
+/**
+ * We're using the useRouter hook to get the category from the URL, then we're filtering the data to
+ * only show the products that match the category
+ */
 export default function Category( { data }) {
 
 
@@ -25,7 +29,8 @@ export default function Category( { data }) {
                         id={data.id}                          
                         productName={data.name} 
                         productDescription={data.description} 
-                        productImage={data.image.desktop}/>
+                        productImage={data.image.desktop}
+                        productSlug={data.slug}/>
                         </li>
                 })
 
@@ -39,6 +44,10 @@ export default function Category( { data }) {
     )
 }
 
+/**
+ * It fetches data from a database and returns it as props
+ * @returns An object with a property called props.
+ */
 export async function getServerSideProps () {
     let data;
     try {

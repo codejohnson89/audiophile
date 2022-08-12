@@ -9,14 +9,14 @@
 
         form {
             display: flex;
-            flex-direction: column;
-            max-width: 730px;
-            margin: 0 auto;
-            padding: 0 48px;
-            gap: 94px;
 
             .formDataCollection {
-            
+                display: flex;
+                flex-direction: column;
+                max-width: 730px;
+                margin: 0 auto;
+                padding: 0 48px;
+                gap: 94px;
                 .section {
                     .heading-subtitle {
                         color: $orange;

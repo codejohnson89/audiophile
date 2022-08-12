@@ -1,3 +1,10 @@
+/**
+ * It takes in a props object, and returns a div with two child divs, one with a heading and a
+ * paragraph, and the other with a heading and an unordered list
+ * @param props - {
+ * @returns A div with two child divs, one with a heading and a paragraph, and the other with a heading
+ * and an unordered list.
+ */
 export default function FeaturesBox(props) {
     return (
         <div className="featuresBox">

@@ -22,6 +22,10 @@ const tileData = [
     }
 ]
 
+/**
+ * It maps over the tileData array and returns a Tile component for each item in the array
+ * @returns An array of Tile components.
+ */
 export default function Tiles () {
 
     return (

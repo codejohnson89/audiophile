@@ -4,6 +4,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { updateCart, addCart } from '../../DataManagement/features/cart/cartSlice';
 import styles from './styles.module.css';
 
+/**
+ * This function is a custom hook that is used to add a product to the cart
+ * @param props - this is the data that is passed down from the parent component
+ * @returns A button that will add the product to the cart
+ */
 export default function AddProduct (props) {
     const [productInfo, setProductInfo] = useState()
     const cart = useSelector((state) => state.cart.value);

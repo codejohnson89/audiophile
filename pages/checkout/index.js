@@ -1,9 +1,15 @@
+import { useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import BackButton from '../../components/BackButton';
 
+/**
+ * It's a checkout form that uses the useForm hook from react-hook-form to handle form validation and
+ * submission
+ */
 export default function Checkout () {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
+    const [ selected, setSelected] = useRef(null)
 
 
     return (
@@ -58,12 +64,12 @@ export default function Checkout () {
                                     <div className='group'>
                                         <div className='border'>
                                             <label className="label-custom" >Credit Card</label>
-                                            <input type="radio" className="input-custom-radio" {...register("address")} />
+                                            <input id='cc' ref={selected} type="radio" className="input-custom-radio" {...register("address")} />
                                         </div>
-                                        <div className='border'>
+                                        {/* <div className='border'>
                                             <label className="label-custom" >Cash on Delivery</label>
-                                            <input type="radio" className="input-custom-radio" {...register("address")} />
-                                        </div>
+                                            <input id='cash' type="radio" className="input-custom-radio" {...register("address")} />
+                                        </div> */}
                                     </div>
                                 </div>
                                 <div className='group'>
@@ -78,16 +84,15 @@ export default function Checkout () {
                         </div>
                     </div>
 
+                    <div className='product-review'>
+                        ProductReview
+                        <input className="input-custom-text" type="submit" />
+                    </div>
+
 
 
 
                     
-                    {/* include validation with required or other standard HTML validation rules */}
-                    {/* <input className="input-custom-text" {...register("exampleRequired", { required: true })} /> */}
-                    {/* errors will return when field validation fails  */}
-                    {/* {errors.exampleRequired && <span>This field is required</span>} */}
-                    
-                    <input className="input-custom-text" type="submit" />
                 </form>
             </div>
 

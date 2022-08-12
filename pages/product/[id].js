@@ -7,13 +7,20 @@ import FeaturesBox from "../../components/ProductDetails/FeaturesBox";
 import Link from "next/link";
 import BackButton from "../../components/BackButton";
 import Gallery from "../../components/ProductDetails/Gallery";
+import { Others } from "../../components/ProductDetails/Others";
 
+/**
+ * It's a function that takes in a data object and returns a section with a bunch of components that
+ * take in the data object
+ */
 export default function ProductDetail({ data }) {
 
     const router = useRouter();
 
     return (
         
+/* It's a function that takes in a data object and returns a section with a bunch of components that
+ * take in the data object */
         <section className="product-details">
             <BackButton />
             <ImageAndText
@@ -26,12 +33,19 @@ export default function ProductDetail({ data }) {
             features={data.features}
             includes={data.includes}/>
             <Gallery data={data}/>
+            <Others data={data}/>
             <Tiles />
             <AudioGear />
         </section>
     )
 }
 
+/**
+ * The getServerSideProps function is used to fetch data from an external API and then pass that data
+ * to the page component as props
+ * @param context - An object with the following properties:
+ * @returns The data is being returned as props.
+ */
 export async function getServerSideProps(context) {
     const id = context.params.id;
 

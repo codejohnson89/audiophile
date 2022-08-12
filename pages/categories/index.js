@@ -1,6 +1,10 @@
 import CategoryHeader from '../../components/CategoryHeader';
 import Product from './product';
 
+/**
+ * We're mapping over the data that we're passing in from the props and returning a list item with a
+ * Product component inside of it
+ */
 export default function Categories( {data} ) {
     // console.log(data)
 
@@ -30,6 +34,10 @@ export default function Categories( {data} ) {
     )
 }
 
+/**
+ * It fetches data from a remote API and returns it as props
+ * @returns An object with a props property.
+ */
 export async function getStaticProps() {
     let data;
     try {

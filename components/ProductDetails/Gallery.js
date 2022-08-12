@@ -1,3 +1,10 @@
+/**
+ * It's a function that returns a section with a class of gallery, which contains a div with a class of
+ * left-side, which contains two divs, one with a class of top and one with a class of bottom, and a
+ * div with a class of right-side
+ * @param props - this is the data that is passed in from the parent component.
+ * @returns A section with a class of gallery.
+ */
 export default function Gallery (props) {
 
     const top = {

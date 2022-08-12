@@ -1,3 +1,8 @@
+/**
+ * It returns a div with two child divs, one with an image and one with text
+ * @param props - {
+ * @returns A div with a class of product.
+ */
 import Image from "next/image";
 import CustomButton from "../../components/Button";
 

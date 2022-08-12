@@ -3,6 +3,10 @@ import { Button } from "react-bootstrap";
 
 import styles from './styles.module.css';
 
+/**
+ * It returns a div with a button that decrements the count, a span with the count, and a button that
+ * increments the count
+ */
 export default function QuantityBox() {
     const [count, setCount] = useState(1)
 
