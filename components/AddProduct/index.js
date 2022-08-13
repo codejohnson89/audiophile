@@ -46,7 +46,8 @@ product in the cart. */
                 dispatch(addCart({
                     productName: props.data.name,
                     productPrice: props.data.price,
-                    quantity: getQuantity()
+                    quantity: getQuantity(),
+                    image: props.data.image.mobile
                 }))
             } else  {
                 if (productInfo.name != props.data.name) {

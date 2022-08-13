@@ -1,0 +1,67 @@
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+    position: absolute !important;
+}
+#cartModal {
+    width: 377px;
+    left: unset !important;
+    right: 165px !important;
+    top: 8em !important;
+    height: 488px;
+
+    .modal-dialog {
+        .modal-content {
+            .modal-body {
+                .top {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .products {
+                    ul {
+                        padding: 0;
+
+                        li {
+                            list-style: none;
+                            display: flex;
+                            justify-content: space-between;
+
+                            .left {
+                                display: flex;
+                                gap: 16px;
+                                .productNamePrice {
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    .name {
+                                        font-weight: 700;
+                                        font-size: 15px;
+                                        line-height: 25px;
+                                    }
+
+                                    .price {
+                                        font-weight: 700;
+                                        font-size: 14px;
+                                        line-height: 25px;
+                                        opacity: .5;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .total {
+                    display: flex;
+                    justify-content: space-between;
+
+                    p {
+                        font-weight: 500;
+                        font-size: 15px;
+                        line-height: 25px;
+                        text-transform: uppercase;
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+    }
+}

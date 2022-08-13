@@ -12,9 +12,12 @@ export default function Checkout () {
     const [ selected, setSelected] = useRef(null)
 
 
+
+
     return (
-        <section className="checkout" id="checkout">
+        <>
             <BackButton />
+            <section className="checkout" id="checkout">
             <div className='form'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='formDataCollection'>
@@ -97,5 +100,7 @@ export default function Checkout () {
             </div>
 
         </section>
+        </>
+
     )
 }
