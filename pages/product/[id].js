@@ -21,22 +21,25 @@ export default function ProductDetail({ data }) {
         
 /* It's a function that takes in a data object and returns a section with a bunch of components that
  * take in the data object */
-        <section className="product-details">
-            <BackButton />
-            <ImageAndText
-                data={data} 
-                image={data.image.desktop} 
-                name={data.name} 
-                description={data.description} 
-                price={data.price}/>
-            <FeaturesBox 
-            features={data.features}
-            includes={data.includes}/>
-            <Gallery data={data}/>
-            <Others data={data}/>
-            <Tiles />
-            <AudioGear />
-        </section>
+<>
+    <BackButton />
+    <section className="product-details">
+        <ImageAndText
+            data={data} 
+            image={data.image.desktop} 
+            name={data.name} 
+            description={data.description} 
+            price={data.price}/>
+        <FeaturesBox 
+        features={data.features}
+        includes={data.includes}/>
+        <Gallery data={data}/>
+        <Others data={data}/>
+        <Tiles />
+        <AudioGear />
+    </section>
+</>
+
     )
 }
 

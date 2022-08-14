@@ -8,3 +8,8 @@
     top: 79px;
     opacity: .5;
 }
+
+.backButton {
+    max-width: 1110px;
+    margin: 0 auto;
+}

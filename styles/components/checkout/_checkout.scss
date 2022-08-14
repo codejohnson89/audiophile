@@ -9,36 +9,39 @@
 
         form {
             display: flex;
+            gap: 63px;
 
             .formDataCollection {
                 display: flex;
                 flex-direction: column;
                 max-width: 730px;
                 margin: 0 auto;
-                padding: 0 48px;
+                padding: 15px;
                 gap: 94px;
+                box-shadow: 1px 2px 5px #333;
+
                 .section {
                     .heading-subtitle {
                         color: $orange;
                         text-transform: uppercase;
                     }
-    
+
                     .form-group {
                         display: flex;
                         flex-wrap: wrap;
                         gap: 16px;
-    
+
                         .group {
                             display: flex;
                             flex-direction: column;
                             gap: 10px;
                         }
-    
+
                         .payment-section {
                             flex-basis: 100%;
                             display: flex;
                             justify-content: space-between;
-    
+
                             .group {
                                 .border {
                                     min-width: 308px;
@@ -48,20 +51,82 @@
                                     align-items: center;
                                     gap: 21px;
                                     padding-left: 1em;
-    
+
                                     input {
                                         order: -1;
                                     }
                                 }
                             }
                         }
-    
+
                         .address {
                             flex-basis: 100%;
                         }
                     }
                 }
             }
+
+            .product-review {
+                box-shadow: 1px 2px 5px #333;
+                height: 100%;
+                padding: 48px;
+                .products {
+                    ul {
+                        padding: 0;
+
+                        li {
+                            list-style: none;
+                            display: flex;
+                            justify-content: space-between;
+
+                            .left {
+                                display: flex;
+                                gap: 16px;
+
+                                .productNamePrice {
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    .name {
+                                        font-weight: 700;
+                                        font-size: 15px;
+                                        line-height: 25px;
+                                    }
+
+                                    .price {
+                                        font-weight: 700;
+                                        font-size: 14px;
+                                        line-height: 25px;
+                                        opacity: .5;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .total,
+                .vat,
+                .grandTotal,
+                .shipping {
+                    display: flex;
+                    justify-content: space-between;
+
+                    p {
+                        font-weight: 500;
+                        font-size: 15px;
+                        line-height: 25px;
+                        opacity: .5;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .btn {
+                    width: 284px;
+                    height: 48px;
+                }
+            }
+
         }
     }
 }
