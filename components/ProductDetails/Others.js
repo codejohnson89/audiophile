@@ -1,4 +1,4 @@
-import { Image } from "react-bootstrap"
+import Image from 'next/image';
 import CustomButton from "../Button"
 
 /**
@@ -16,7 +16,7 @@ export function Others(props) {
                     {
                         props.data.others.map((product) => {
                             return <li key={product.name}>
-                                <Image src={product.image.desktop} alt={product.name} width={350}/>
+                                <Image src={product.image.desktop} alt={product.name} width={350} height={318}/>
                                 <h5>{product.name}</h5>
                                 <CustomButton link={'/product/' + product.id} classname="btn-custom-orange" text="see product"/>
                             </li>

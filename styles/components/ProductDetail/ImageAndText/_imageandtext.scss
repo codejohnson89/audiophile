@@ -3,9 +3,6 @@
     justify-content: center;
     align-items: center;
     gap: 125px;
-    &:nth-child(odd) {
-        flex-direction: row-reverse;
-    }
 
     .imageContainer {
         background-color: $darkGrey;
@@ -25,6 +22,38 @@
 
         .btn-group {
             gap: 16px;
+        }
+    }
+
+    @media only screen and (max-width: 1025px) {
+
+        max-width: 691px;
+        margin: 0 auto;
+        
+        .textContainer {
+            align-items: flex-start;
+            text-align: center;
+            gap: 24px;
+
+            p {
+                max-width: 327px;
+                text-align: left;
+            }
+        }
+
+        .imageContainer {
+            width: 281px;
+            min-width: 0;
+            min-height: 480px;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        flex-direction: column;
+        gap: 32px;
+
+        .imageContainer {
+            min-width: 0;
         }
     }
 }

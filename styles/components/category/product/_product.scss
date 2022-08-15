@@ -1,11 +1,14 @@
 ul {
     list-style-type: none;
+    padding: 0;
 
+    @media only screen and (min-width: 1025px){
     li:nth-child(even) {
         .product {
             flex-direction: row-reverse;
         }
     }
+}
 
     .product {
         display: flex;
@@ -13,9 +16,14 @@ ul {
         align-items: center;
         gap: 125px;
         margin-bottom: 125px;
+
+        @media only screen and (min-width: 1025px){
         &:nth-child(even) {
             flex-direction: row-reverse;
         }
+    }
+
+
 
         .imageContainer {
             background-color: $darkGrey;
@@ -31,6 +39,28 @@ ul {
             flex-direction: column;
             align-items: flex-start;
             max-width: 445px;
+        }
+
+        @media only screen and (max-width: 1025px) {
+            flex-direction: column;
+            gap: 32px;
+
+            .textContainer {
+                align-items: center;
+                text-align: center;
+                gap: 24px;
+
+                p {
+                    max-width: 327px;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .imageContainer {
+                min-width: 0;
+            }
         }
     }
 }

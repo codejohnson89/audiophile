@@ -64,6 +64,14 @@
                         }
                     }
                 }
+
+                @media only screen and (max-width: 1025px) {
+                    flex-direction: column;
+
+                    .payment-section {
+                        flex-direction: column;
+                    }
+                }
             }
 
             .product-review {
@@ -125,6 +133,10 @@
                     width: 284px;
                     height: 48px;
                 }
+            }
+
+            @media only screen and (max-width: 1025px) {
+                flex-direction: column;
             }
 
         }

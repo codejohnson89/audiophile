@@ -36,4 +36,27 @@
             }
         }
     }
+
+    @media only screen and (max-width: 1025px) {
+        flex-direction: column;
+        gap: 120px;
+        max-width: 691px;
+        margin: 0 auto;
+
+        .box {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        gap: 88px;
+        max-width: 327px;
+        margin: 0 auto;
+        
+        .box {
+            flex-direction: column;
+        }
+    }
 }

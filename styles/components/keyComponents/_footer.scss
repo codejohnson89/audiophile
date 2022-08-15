@@ -1,0 +1,91 @@
+.footer {
+    background-color: #101010;
+    display: flex;
+    align-items: center;
+    min-height: 365px;
+
+    @media only screen and (max-width: 1025px) {
+        padding: 60px 39px;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+        width: 100%;
+
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+
+            .navLinks {
+                display: flex;
+                gap: 34px;
+                justify-content: center;
+
+                .nav-link {
+                    color: $white;
+                    font-weight: 700;
+                    font-size: 13px;
+                    line-height: 25px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                }
+            }
+
+            @media only screen and (max-width: 1025px) {
+                flex-direction: column;
+                gap: 32px;
+
+                .navLinks {
+                    justify-content: flex-start;
+                }
+            }
+
+            @media only screen and (max-width: 767px) {
+                align-items: center;
+
+                .navLinks {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+
+        .middle,
+        .bottom {
+            .text, .copyright {
+                max-width: 540px;
+                p {
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 25px;
+                    color: #fff;
+                    opacity: .5;
+
+                    @media only screen and (max-width: 767px) {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            
+            .socialmedia {
+                display: flex;
+                gap: 16px;
+                height: 24px;
+            }
+
+            @media only screen and (max-width: 767px) {
+                flex-direction: column;
+                align-items: center;
+                gap: 48px;
+            }
+        }
+    }
+}

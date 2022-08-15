@@ -24,4 +24,22 @@
             }
         }
     }
+
+    @media only screen and (max-width: 1025px) {
+        max-width: 691px;
+        margin: 0 auto;
+
+        ul {
+            padding: 0;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .products {
+            ul {
+                padding: 0;
+                flex-direction: column;
+            }
+        }
+    }
 }
