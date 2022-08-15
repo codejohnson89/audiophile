@@ -4,8 +4,7 @@
     color: #000;
     text-transform: capitalize;
     display: flex;
-    position: relative;
-    top: 79px;
+    margin: 79px 0;
     opacity: .5;
 }
 
