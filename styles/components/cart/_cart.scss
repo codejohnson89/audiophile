@@ -1,5 +1,10 @@
 .ReactModal__Overlay.ReactModal__Overlay--after-open {
     position: absolute !important;
+
+    @media only screen and (max-width: 767px) {
+        display: flex;
+        justify-content: center;
+    }
 }
 #cartModal {
     width: 377px;
@@ -63,5 +68,9 @@
                 }
             }
         }
+    }
+
+    @media only screen and (max-width: 767px) {
+     position: unset !important;
     }
 }
