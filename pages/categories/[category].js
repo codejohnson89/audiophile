@@ -18,9 +18,9 @@ export default function Category( { data }) {
     })
 
     return (
-        <section>
+        <>
             <CategoryHeader header={router.query.category}/>
-            <div className="catergory">
+            <section className="catergory">
                 <ul>
             {
                 filterData.map((data) => {
@@ -37,10 +37,10 @@ export default function Category( { data }) {
                 
             }
                 </ul>
-            </div>
+            </section>
             <Tiles/>
             <AudioGear />
-        </section>
+        </>
     )
 }
 
