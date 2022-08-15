@@ -68,7 +68,7 @@ export default function Checkout () {
     total()
     VAT()
     gt()
-  }, [])
+  })
 
     return (
         <>

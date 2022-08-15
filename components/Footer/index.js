@@ -25,7 +25,7 @@ export default function Footer() {
                     <div className='middle'>
                         <div className='text'>
                             <p>
-                            Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.
+                            Audiophile is an all in one stop to fulfill your audio needs. Were a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - were open 7 days a week.
                             </p>
                         </div>
                     </div>
