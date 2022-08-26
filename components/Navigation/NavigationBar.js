@@ -10,6 +10,9 @@ import ReactModal from 'react-modal';
 import { useSelector } from 'react-redux';
 import QuantityBox from '../QuantityBox';
 
+import cart from '../../public/assets/shared/desktop/icon-cart.svg'
+import { Button } from 'react-bootstrap';
+
 ReactModal.setAppElement('#__next')
 
 /**
@@ -46,15 +49,15 @@ export default function NavigationBar () {
       return a + b;
   }, 0);
 
-  console.log(sum)
 
    totalPrice = sum;
-   console.log(totalPrice)
    setTotalPrice(sum)
-
-  console.log('modal just open')
   }
 
+  function updateQuantity (count) {
+    product.quantity++
+    console.log('update ', count)
+  }
     return (
         <>
           <Navbar expand="lg">
@@ -79,22 +82,32 @@ export default function NavigationBar () {
             isOpen={modalIsOpen}
             onAfterOpen={total}
             id='cartModal'
+            preventScroll={true}
+            className="animate__animated animate__slideInRight animate__delay-300ms"
           >
               <div className="modal-dialog">
                 <div className="modal-content">
                   <div className="modal-header">
                     <button onClick={closeModal} type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h6 className="heading-h6">Cart ({cartCount})</h6>
                   </div>
                   <div className="modal-body">
-                    <div className='top'>
-                      <h6 className="heading-h6">Cart ({cartCount})</h6>
+                    {/* <div className='top'>
                       <p className='removeAll'>remove all</p>
-                    </div>
-                    <div className='products'>
-                      <ul>
+                    </div> */}
+                        <div className={!cartCount ? 'empty' : 'products'}>
+                      {
+                        !cartCount ? <div className='emptyCart'>
+                          <div className='imageContainer'>
+                            <Image src={cart} alt="cart icon" width={75} height={75}/>
+                          </div>
+                          <div className='content'>
+                            <p>Your cart is empty</p>
+                          </div>
+                        </div> : <ul>
                         {
                           products.map((product) => {
-                            return <li key={product.productName}>
+                            return <li key={cartCount + 1}>
                               <div className='left'>
                                 <div className='image'>
                                   <Image src={product.image} alt={product.productName} width={64} height={64}/>
@@ -105,19 +118,26 @@ export default function NavigationBar () {
                                 </div>
                               </div>
                               <div className='right'>
-                                x{product.quantity}
+                                {/* <Button onClick={() => {
+                                  updateQuantity(product.quantity)
+                                }}>-</Button>
+                                <span className='count'>{product.quantity}</span>
+                                <Button>+</Button> */}
+
+                                <QuantityBox count={product.quantity}/>
                               </div>
                             </li>
                           })
                         }
                       </ul>
-                    </div>
-                    <div className='total'>
-                      <p>total</p>
-                      <span>$ {totalPrice}</span>
+                      }
                     </div>
                   </div>
                   <div className="modal-footer">
+                  <div className='total'>
+                      <p>total</p>
+                      <span>$ {totalPrice}</span>
+                    </div>
                    <Link href="/checkout"><button onClick={closeModal} type="button" className="btn btn-custom-orange checkout-btn" data-bs-dismiss="modal">checkout</button></Link>
                   </div>
                 </div>
